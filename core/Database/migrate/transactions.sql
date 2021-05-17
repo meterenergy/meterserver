@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS `transactions` (
+    `id` BIGINT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(100) NOT NULL,
+    `method` VARCHAR(100) NOT NULL,
+    `type` VARCHAR(100) NOT NULL,
+    `amount` INT NOT NULL,
+    `sender` VARCHAR(100) NOT NULL,
+    `recipient` VARCHAR(100) NOT NULL,
+    `reference` VARCHAR(50) NOT NULL UNIQUE,
+    `trackid` VARCHAR(50) NOT NULL,
+    `body` TEXT NOT NULL,
+    `author` VARCHAR(100) NOT NULL,
+    `status` VARCHAR(50) NULL DEFAULT 'pending',
+    `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

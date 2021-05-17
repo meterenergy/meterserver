@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS `wallets` (
+    `id` BIGINT NOT NULL AUTO_INCREMENT,
+    `balance` INT NOT NULL,
+    `outstanding` INT NOT NULL,
+    `currency` VARCHAR(50) NOT NULL DEFAULT 'ngn',
+    `holder` VARCHAR(100) NOT NULL,
+    `status` VARCHAR(10) NULL DEFAULT 'active',
+    `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

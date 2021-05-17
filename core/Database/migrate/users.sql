@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS `users` (
+    `id` BIGINT NOT NULL AUTO_INCREMENT,
+    `firstname` VARCHAR(100) NOT NULL,
+    `middlename` VARCHAR(100) NOT NULL,
+    `lastname` VARCHAR(100) NOT NULL,
+    `phonenumber` VARCHAR(50) NOT NULL,
+    `email` VARCHAR(50) NOT NULL,
+    `password` VARCHAR(255) NOT NULL,
+    `status` VARCHAR(10) NULL DEFAULT 'active',
+    `verified` BOOLEAN NULL DEFAULT FALSE,
+    `joined` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
